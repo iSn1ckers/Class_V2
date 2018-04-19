@@ -15,93 +15,47 @@ class Animal:
         self.age = age
 
 
-class Cows(Animal):
-    def __init__(self, name, age, speech):
-        Animal.__init__(self, name, age)
-        self.speech = speech
+class Cattle(Animal):
+    hoofs = 4
 
+
+class Birds(Animal):
+    wings = 2
+
+
+class Cows(Cattle):
     def got_milk(self):
         print('Благодаря корове у вас будет молоко')
 
-    def __str__(self):
-        return 'Животное: {0}\n Возраст: {1}\n "Говорит": {2}'.format(self.name, self.age, self.speech)
 
-
-class Goats(Animal):
-    def __init__(self, name, age, speech):
-        Animal.__init__(self, name, age)
-        self.speech = speech
-
-    def got_milk(self):
+class Goats(Cattle):
+    def goat_milk(self):
         print('Козы как и коровы дают молоко')
 
-    def __str__(self):
-        return 'Животное: {0}\n Возраст: {1}\n "Говорит": {2}'.format(self.name, self.age, self.speech)
 
-
-class Sheep(Animal):
-    def __init__(self, name, age, speech):
-        Animal.__init__(self, name, age)
-        self.speech = speech
-
+class Sheeps(Cattle):
     def wool(self):
         print('Благодаря овцам у вас будет шерсть')
 
-    def __str__(self):
-        return 'Животное: {0}\n Возраст: {1}\n "Говорит": {2}'.format(self.name, self.age, self.speech)
 
-
-class Pigs(Animal):
-    def __init__(self, name, age, speech):
-        Animal.__init__(self, name, age)
-        self.speech = speech
-
+class Pigs(Cattle):
     def meat(self):
         print('Свинина, ням ням')
 
-    def __str__(self):
-        return 'Животное: {0}\n Возраст: {1}\n "Говорит": {2}'.format(self.name, self.age, self.speech)
 
-
-class Ducks(Animal):
-    def __init__(self, name, age, speech):
-        Animal.__init__(self, name, age)
-        self.speech = speech
-
+class Ducks(Birds):
     def duck_meat(self):
         print('Утиное мясо очень вкусное, да и перья пригодятся')
 
-    def __str__(self):
-        return 'Животное: {0}\n Возраст: {1}\n "Говорит": {2}'.format(self.name, self.age, self.speech)
 
-
-class Chickens(Animal):
-    def __init__(self, name, age, speech):
-        Animal.__init__(self, name, age)
-        self.speech = speech
-
+class Chicken(Birds):
     def eggs(self):
         print('Куры это не только мясо, но и яйца')
 
-    def __str__(self):
-        return 'Животное: {0}\n Возраст: {1}\n "Говорит": {2}'.format(self.name, self.age, self.speech)
 
-
-class Geese(Animal):
-    def __init__(self, name, age, speech):
-        Animal.__init__(self, name, age)
-        self.speech = speech
-
+class Geese(Birds):
     def geese_meat(self):
         print('Гуси гуси га га га')
 
-    def __str__(self):
-        return 'Животное: {0}\n Возраст: {1}\n "Говорит": {2}'.format(self.name, self.age, self.speech)
 
 
-c = Geese(input('Как зовут вашего питомца?'), input('Сколько ему лет?'), input('Какой звук он издает?'))
-# c.name = input()
-# c.age = input()
-# c.speech - input()
-print (c)
-c.geese_meat()
