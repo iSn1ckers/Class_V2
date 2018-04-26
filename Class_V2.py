@@ -25,7 +25,7 @@ class Birds(Animal):
 
 class Cows(Cattle):
     def got_milk(self):
-        print('Благодаря корове у вас будет молоко')
+        print('Mmm milk')
 
 
 class Goats(Cattle):
@@ -44,8 +44,9 @@ class Pigs(Cattle):
 
 
 class Ducks(Birds):
-    def duck_meat(self):
-        print('Утиное мясо очень вкусное, да и перья пригодятся')
+    def __init__(self, name, age, say):
+        super().__init__(name, age)
+        self.say = say
 
 
 class Chicken(Birds):
@@ -58,4 +59,13 @@ class Geese(Birds):
         print('Гуси гуси га га га')
 
 
-
+burenka = Cows('burenka', 4)
+gavrusha = Cows('Gavrusha', 0.5)
+darkwing_duck = Ducks('Darkwing Duck', 9, "I am the terror that flaps in the night!")
+some_duck = Ducks('Duck', 1, 'quack quack')
+pig = Pigs('pig', 2)
+#print("Name: {} \nAge: {}\n".format(burenka.name, burenka.age))
+#print("Name: {} \nAge: {} \nSay: {}\n".format(darkwing_duck.name, darkwing_duck.age, darkwing_duck.say))
+#print("Name: {} \nAge: {}\n".format(gavrusha.name, gavrusha.age))
+#print("Name: {} \nAge: {} \nSay: {}\n".format(some_duck.name, some_duck.age, some_duck.say))
+#burenka.got_milk()
